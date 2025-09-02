@@ -10,6 +10,5 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer codigo;
-
     public String nome;
 }

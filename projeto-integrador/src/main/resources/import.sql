@@ -1,0 +1,76 @@
+insert into Categoria (nome) values ('Bebidas');
+insert into Categoria (nome) values ('Carnes');
+insert into Categoria (nome) values ('Higiene');
+insert into Categoria (nome) values ('Limpeza');
+insert into Categoria (nome) values ('Outros');
+insert into Categoria (nome) values ('Padaria');
+insert into Categoria (nome) values ('Laticínios');
+insert into Categoria (nome) values ('Frios');
+insert into Categoria (nome) values ('Congelados');
+insert into Categoria (nome) values ('Farináceos');
+
+insert into Fabricante (nome) values ('JBS');
+insert into Fabricante (nome) values ('The Coca-Cola Company');
+insert into Fabricante (nome) values ('Nestlé');
+insert into Fabricante (nome) values ('Unilever');
+insert into Fabricante (nome) values ('P&G');
+insert into Fabricante (nome) values ('Bunge');
+insert into Fabricante (nome) values ('Vigor');
+insert into Fabricante (nome) values ('Aurora');
+insert into Fabricante (nome) values ('Mãe Terra');
+insert into Fabricante (nome) values ('Seara');
+
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo)  values ('Coca-Cola Lata 2 Litros', 20, 12.50, '2025-12-20', 1, 2);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Picanha', 15, 59.90, '2024-11-15', 2, 1);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Desodorante Dove', 50, 18.90, '2026-05-10', 3, 4);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Leite Integral', 80, 5.50, '2025-01-25', 7, 5);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Manteiga', 30, 8.75, '2025-02-18', 7, 5);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Pão Francês', 120, 0.70, '2024-12-05', 6, NULL);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Sabão em Pó Ariel', 40, 25.00, '2026-03-22', 4, 3);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Massa de Lasanha', 25, 6.99, '2025-08-30', 10, 6);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Salsicha Hot-Dog', 90, 9.99, '2025-01-10', 8, 7);
+insert into Produto (nome, quantidade, preco, validade, categoria_codigo, fabricante_codigo) values ('Frango Congelado', 35, 18.50, '2025-06-01', 9, 8);
+
+insert into Cliente (nome, cpf) values ('Otavio Volpe', '39439061239');
+insert into Cliente (nome, cpf) values ('Hernandes de Castro', '52252119745');
+insert into Cliente (nome, cpf) values ('Gabriel Hernandes', '45678901234');
+insert into Cliente (nome, cpf) values ('Luiz Felipe', '98765432109');
+insert into Cliente (nome, cpf) values ('Maria Eloisa', '23456789012');
+insert into Cliente (nome, cpf) values ('Eduardo Pereira', '87654321098');
+insert into Cliente (nome, cpf) values ('Mariana Ribeiro', '54321098765');
+insert into Cliente (nome, cpf) values ('Gustavo Ferreira', '90123456789');
+insert into Cliente (nome, cpf) values ('Patrícia Almeida', '67890123456');
+insert into Cliente (nome, cpf) values ('Vitor Martins', '34567890123');
+
+insert into Funcionario (nome, cpf) values ('Carlos', '12345678901');
+insert into Funcionario (nome, cpf) values ('Ana', '10987654321');
+insert into Funcionario (nome, cpf) values ('Pedro', '23456789012');
+insert into Funcionario (nome, cpf) values ('Lucia', '87654321098');
+insert into Funcionario (nome, cpf) values ('Rafael', '54321098765');
+insert into Funcionario (nome, cpf) values ('Camila', '90123456789');
+insert into Funcionario (nome, cpf) values ('Rodrigo', '67890123456');
+insert into Funcionario (nome, cpf) values ('Beatriz', '34567890123');
+insert into Funcionario (nome, cpf) values ('João', '11223344556');
+insert into Funcionario (nome, cpf) values ('Isabela', '99887766554');
+
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-01 14:30:00', 72.40, 3, 1, 1);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-01 15:00:00', 59.90, 1, 2, 1);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-02 11:00:00', 37.80, 2, 3, 2);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-02 12:45:00', 8.75, 1, 4, 3);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-03 16:20:00', 16.80, 4, 5, 4);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-04 09:30:00', 25.00, 1, 6, 5);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-04 10:15:00', 6.99, 1, 7, 6);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-05 18:05:00', 19.98, 2, 8, 7);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-05 19:40:00', 55.50, 10, 9, 8);
+insert into Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) values ('2024-10-06 08:50:00', 18.50, 1, 10, 1);
+
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (25.00, 2, 1);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (59.00, 1, 2);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (37.80, 2, 3);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (8.75, 1, 4);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (2.80, 4, 6);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (25.00, 1, 7);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (6.99, 1, 8);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (19.98, 2, 9);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (55.50, 10, 10);
+insert into ItemVenda (valorParcial, quantidadeParcial, produto_codigo) values (18.50, 1, 11);

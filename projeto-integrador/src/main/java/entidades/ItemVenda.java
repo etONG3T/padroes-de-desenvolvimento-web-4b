@@ -1,14 +1,13 @@
 package entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class ItemVenda {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer codigo;
@@ -18,9 +17,5 @@ public class ItemVenda {
     public Integer quantidadeParcial;
 
     @ManyToOne
-    public Produto produto; 
-
-    @ManyToOne
-    public Venda venda;
-
+    public Produto produto;
 }

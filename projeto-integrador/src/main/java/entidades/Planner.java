@@ -1,0 +1,28 @@
+package entidades;
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+import java.time.LocalDateTime;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+
+@Entity
+public class Planner extends PanacheEntityBase{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Integer id;
+
+    public String prioridades;
+    public LocalDateTime agenda;
+    public String tarefas;
+
+    @ManyToOne
+    public Aluno aluno;
+
+}

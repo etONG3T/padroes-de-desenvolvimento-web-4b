@@ -7,10 +7,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Fabricante extends PanacheEntityBase {
+public class Professor extends PanacheEntityBase{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer codigo;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
 
+    public Integer id;
     public String nome;
+    public String cpf;
+    public String email;
+    public String senha;
 }

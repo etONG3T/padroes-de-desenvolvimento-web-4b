@@ -7,10 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Categoria extends PanacheEntityBase {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer codigo;
+public class Turma extends PanacheEntityBase{
+   @Id
+   @GeneratedValue (strategy = GenerationType.IDENTITY)
+    public Integer id;
 
     public String nome;
+   
 }

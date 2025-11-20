@@ -1,7 +1,5 @@
 package entidades;
 
-import java.time.LocalDate;
-
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,22 +8,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Produto extends PanacheEntityBase {
+public class VideoAulas extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer codigo;
+    public Integer id;
 
-    public String nome;
-
-    public Integer quantidade;
-
-    public Double preco;
-
-    public LocalDate validade;
+    public String titulo;
 
     @ManyToOne
-    public Categoria categoria;
+    public Curso curso;
 
     @ManyToOne
-    public Fabricante fabricante;
+    public Turma turma;
+
+    @ManyToOne
+    public Professor professor;
+
 }
